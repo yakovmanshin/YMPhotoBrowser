@@ -6,10 +6,7 @@
 //  Copyright © 2017年 suzuki_keishi. All rights reserved.
 //
 
-import Foundation
-
-// helpers which often used
-private let bundle = Bundle(for: SKPhotoBrowser.self)
+import UIKit
 
 class SKToolbar: UIToolbar {
     var toolActionButton: UIBarButtonItem!

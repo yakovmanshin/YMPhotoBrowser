@@ -8,7 +8,7 @@
 
 import UIKit
 
-private let bundle = Bundle(for: SKPhotoBrowser.self)
+private let bundle = Bundle.module
 
 class SKPaginationView: UIView {
     var counterLabel: UILabel?
@@ -143,7 +143,7 @@ class SKPaginationButton: UIButton {
                             .flexibleTopMargin]
         contentMode = .center
         
-        let image = UIImage(named: "SKPhotoBrowser.bundle/images/\(imageName)",
+        let image = UIImage(named: imageName,
             in: bundle, compatibleWith: nil) ?? UIImage()
         setImage(image, for: .normal)
     }
