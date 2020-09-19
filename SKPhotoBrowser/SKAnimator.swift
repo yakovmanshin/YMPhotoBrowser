@@ -19,7 +19,7 @@ class SKAnimator: NSObject, SKPhotoBrowserAnimatorDelegate {
     fileprivate var finalImageViewFrame: CGRect = .zero
     
     internal lazy var backgroundView: UIView = {
-        guard let window = UIApplication.shared.preferredApplicationWindow else { fatalError() }
+        let window = UIApplication.shared.preferredApplicationWindow ?? UIWindow()
         
         let backgroundView = UIView(frame: window.frame)
         backgroundView.backgroundColor = SKPhotoBrowserOptions.backgroundColor
