@@ -1,5 +1,13 @@
 # Change Log
 
+## 7.0.0
+
+### New
+- [#1] Added Swift Package Manager support (requires Swift 5.3 / Xcode 12)
+
+### Breaking Changes
+- Removed CocoaPods support due to resources embedding issues
+
 ## 6.1.0
 
 ### Big Changed
@@ -345,4 +353,3 @@ Released on 10-2015
 
 ## 1.0.0
 Released on 10-2015
-

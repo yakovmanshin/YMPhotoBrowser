@@ -53,6 +53,14 @@ Below is a table that shows which version of SKPhotoBrowser you should use for y
 
 ## Installation
 
+#### Swift Package Manager
+
+Version 7.x.x is available exclusively through Swift Package Manager and requires Swift 5.3 / Xcode 12.
+
+```swift
+.package(url: "https://github.com/yakovmanshin/SKPhotoBrowser.git", from: "7.0.0")
+```
+
 #### CocoaPods
 available on CocoaPods. Just add the following to your project Podfile:
 ```
