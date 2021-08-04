@@ -10,6 +10,7 @@ import UIKit
 
 private let bundle = Bundle.module
 
+@available(iOSApplicationExtension, unavailable)
 class SKPaginationView: UIView {
     var counterLabel: UILabel?
     var prevButton: UIButton?
@@ -81,6 +82,7 @@ class SKPaginationView: UIView {
     }
 }
 
+@available(iOSApplicationExtension, unavailable)
 private extension SKPaginationView {
     func setupApperance() {
         backgroundColor = .clear
