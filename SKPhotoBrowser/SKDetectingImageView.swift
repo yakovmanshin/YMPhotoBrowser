@@ -8,11 +8,13 @@
 
 import UIKit
 
+@available(iOSApplicationExtension, unavailable)
 @objc protocol SKDetectingImageViewDelegate {
     func handleImageViewSingleTap(_ touchPoint: CGPoint)
     func handleImageViewDoubleTap(_ touchPoint: CGPoint)
 }
 
+@available(iOSApplicationExtension, unavailable)
 class SKDetectingImageView: UIImageView {
     weak var delegate: SKDetectingImageViewDelegate?
     
@@ -35,6 +37,7 @@ class SKDetectingImageView: UIImageView {
     }
 }
 
+@available(iOSApplicationExtension, unavailable)
 private extension SKDetectingImageView {
     func setup() {
         isUserInteractionEnabled = true
