@@ -8,6 +8,7 @@
 
 import UIKit
 
+@available(iOSApplicationExtension, unavailable)
 public struct SKPhotoBrowserOptions {
     public static var displayStatusbar: Bool = false
     public static var displayCloseButton: Bool = true
@@ -49,11 +50,13 @@ public struct SKPhotoBrowserOptions {
     public static var sessionConfiguration: URLSessionConfiguration = .default
 }
 
+@available(iOSApplicationExtension, unavailable)
 public struct SKButtonOptions {
     public static var closeButtonPadding: CGPoint = CGPoint(x: 5, y: 20)
     public static var deleteButtonPadding: CGPoint = CGPoint(x: 5, y: 20)
 }
 
+@available(iOSApplicationExtension, unavailable)
 public struct SKCaptionOptions {
     public enum CaptionLocation {
         case basic
@@ -69,6 +72,7 @@ public struct SKCaptionOptions {
     public static var captionLocation: CaptionLocation = .basic
 }
 
+@available(iOSApplicationExtension, unavailable)
 public struct SKToolbarOptions {
     public static var textColor: UIColor = .white
     public static var font: UIFont = .systemFont(ofSize: 17.0)
