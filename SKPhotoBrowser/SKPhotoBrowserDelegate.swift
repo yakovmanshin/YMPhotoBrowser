@@ -8,6 +8,7 @@
 
 import UIKit
 
+@available(iOSApplicationExtension, unavailable)
 @objc public protocol SKPhotoBrowserDelegate {
     
     /**
