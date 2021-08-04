@@ -8,6 +8,7 @@
 
 import UIKit
 
+@available(iOSApplicationExtension, unavailable)
 open class SKCaptionView: UIView {
     fileprivate var photo: SKPhotoProtocol?
     fileprivate var photoLabel: UILabel!
@@ -43,6 +44,7 @@ open class SKCaptionView: UIView {
     }
 }
 
+@available(iOSApplicationExtension, unavailable)
 private extension SKCaptionView {
     func setup() {
         isOpaque = false
