@@ -8,6 +8,7 @@
 
 import UIKit
 
+@available(iOSApplicationExtension, unavailable)
 internal extension UIApplication {
     var preferredApplicationWindow: UIWindow? {
         // Since delegate window is of type UIWindow??, we have to
