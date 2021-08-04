@@ -8,6 +8,7 @@
 
 import UIKit
 
+@available(iOSApplicationExtension, unavailable)
 class SKIndicatorView: UIActivityIndicatorView {
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
