@@ -8,11 +8,13 @@
 
 import UIKit
 
+@available(iOSApplicationExtension, unavailable)
 @objc protocol SKDetectingViewDelegate {
     func handleSingleTap(_ view: UIView, touch: UITouch)
     func handleDoubleTap(_ view: UIView, touch: UITouch)
 }
 
+@available(iOSApplicationExtension, unavailable)
 class SKDetectingView: UIView {
     weak var delegate: SKDetectingViewDelegate?
     
