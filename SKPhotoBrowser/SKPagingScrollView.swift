@@ -8,6 +8,7 @@
 
 import UIKit
 
+@available(iOSApplicationExtension, unavailable)
 class SKPagingScrollView: UIScrollView {
     fileprivate let pageIndexTagOffset: Int = 1000
     fileprivate let sideMargin: CGFloat = 10
@@ -215,6 +216,7 @@ class SKPagingScrollView: UIScrollView {
     }
 }
 
+@available(iOSApplicationExtension, unavailable)
 private extension SKPagingScrollView {
     func frameForPageAtIndex(_ index: Int) -> CGRect {
         var pageFrame = bounds

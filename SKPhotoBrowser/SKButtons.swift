@@ -10,6 +10,7 @@ import UIKit
 
 private let bundle = Bundle.module
 
+@available(iOSApplicationExtension, unavailable)
 class SKButton: UIButton {
     internal var showFrame: CGRect!
     internal var hideFrame: CGRect!
@@ -48,6 +49,7 @@ class SKButton: UIButton {
     func updateFrame(_ frameSize: CGSize) { }
 }
 
+@available(iOSApplicationExtension, unavailable)
 class SKImageButton: SKButton {
     fileprivate var imageName: String { return "" }
 
@@ -63,6 +65,7 @@ class SKImageButton: SKButton {
     }
 }
 
+@available(iOSApplicationExtension, unavailable)
 class SKCloseButton: SKImageButton {
     override var imageName: String { return "btn_common_close_wh" }
     override var marginX: CGFloat {
@@ -90,6 +93,7 @@ class SKCloseButton: SKImageButton {
     }
 }
 
+@available(iOSApplicationExtension, unavailable)
 class SKDeleteButton: SKImageButton {
     override var imageName: String { return "btn_common_delete_wh" }
     override var marginX: CGFloat {

@@ -8,6 +8,7 @@
 
 import UIKit
 
+@available(iOSApplicationExtension, unavailable)
 @objc public protocol SKPhotoProtocol: NSObjectProtocol {
     var index: Int { get set }
     var underlyingImage: UIImage! { get }
@@ -18,6 +19,8 @@ import UIKit
 }
 
 // MARK: - SKPhoto
+
+@available(iOSApplicationExtension, unavailable)
 open class SKPhoto: NSObject, SKPhotoProtocol {
     open var index: Int = 0
     open var underlyingImage: UIImage!
@@ -109,6 +112,7 @@ open class SKPhoto: NSObject, SKPhotoProtocol {
 
 // MARK: - Static Function
 
+@available(iOSApplicationExtension, unavailable)
 extension SKPhoto {
     public static func photoWithImage(_ image: UIImage) -> SKPhoto {
         return SKPhoto(image: image)

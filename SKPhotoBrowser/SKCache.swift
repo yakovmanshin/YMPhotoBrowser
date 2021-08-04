@@ -8,6 +8,7 @@
 
 import UIKit
 
+@available(iOSApplicationExtension, unavailable)
 open class SKCache {
     public static let sharedCache = SKCache()
     open var imageCache: SKCacheable
@@ -68,6 +69,7 @@ open class SKCache {
     }
 }
 
+@available(iOSApplicationExtension, unavailable)
 class SKDefaultImageCache: SKImageCacheable {
     var cache: NSCache<AnyObject, AnyObject>
 

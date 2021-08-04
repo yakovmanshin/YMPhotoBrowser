@@ -11,6 +11,7 @@ import UIKit
 public let SKPHOTO_LOADING_DID_END_NOTIFICATION = "photoLoadingDidEndNotification"
 
 // MARK: - SKPhotoBrowser
+@available(iOSApplicationExtension, unavailable)
 open class SKPhotoBrowser: UIViewController {
     // open function
     open var currentPageIndex: Int = 0
@@ -265,6 +266,7 @@ open class SKPhotoBrowser: UIViewController {
 
 // MARK: - Public Function For Customizing Buttons
 
+@available(iOSApplicationExtension, unavailable)
 public extension SKPhotoBrowser {
     func updateCloseButton(_ image: UIImage, size: CGSize? = nil) {
         actionView.updateCloseButton(image: image, size: size)
@@ -277,6 +279,7 @@ public extension SKPhotoBrowser {
 
 // MARK: - Public Function For Browser Control
 
+@available(iOSApplicationExtension, unavailable)
 public extension SKPhotoBrowser {
     func initializePageIndex(_ index: Int) {
         let i = min(index, photos.count - 1)
@@ -367,6 +370,7 @@ public extension SKPhotoBrowser {
 
 // MARK: - Internal Function
 
+@available(iOSApplicationExtension, unavailable)
 internal extension SKPhotoBrowser {
     func showButtons() {
         actionView.animate(hidden: false)
@@ -387,6 +391,7 @@ internal extension SKPhotoBrowser {
 
 // MARK: - Internal Function For Frame Calc
 
+@available(iOSApplicationExtension, unavailable)
 internal extension SKPhotoBrowser {
     func frameForToolbarAtOrientation() -> CGRect {
         let offset: CGFloat = {
@@ -420,6 +425,7 @@ internal extension SKPhotoBrowser {
 
 // MARK: - Internal Function For Button Pressed, UIGesture Control
 
+@available(iOSApplicationExtension, unavailable)
 internal extension SKPhotoBrowser {
     @objc func panGestureRecognized(_ sender: UIPanGestureRecognizer) {
         guard let zoomingScrollView: SKZoomingScrollView = pagingScrollView.pageDisplayedAtIndex(currentPageIndex) else {
@@ -535,6 +541,8 @@ internal extension SKPhotoBrowser {
 }
 
 // MARK: - Private Function
+
+@available(iOSApplicationExtension, unavailable)
 private extension SKPhotoBrowser {
     func configureAppearance() {
         view.backgroundColor = bgColor
@@ -600,6 +608,7 @@ private extension SKPhotoBrowser {
 
 // MARK: - UIScrollView Delegate
 
+@available(iOSApplicationExtension, unavailable)
 extension SKPhotoBrowser: UIScrollViewDelegate {
     public func scrollViewDidScroll(_ scrollView: UIScrollView) {
         guard isViewActive else { return }

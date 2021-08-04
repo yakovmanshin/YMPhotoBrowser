@@ -8,6 +8,7 @@
 
 import UIKit
 
+@available(iOSApplicationExtension, unavailable)
 class SKToolbar: UIToolbar {
     var toolActionButton: UIBarButtonItem!
     fileprivate weak var browser: SKPhotoBrowser?
@@ -38,6 +39,7 @@ class SKToolbar: UIToolbar {
     }
 }
 
+@available(iOSApplicationExtension, unavailable)
 private extension SKToolbar {
     func setupApperance() {
         backgroundColor = .clear

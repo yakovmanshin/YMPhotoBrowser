@@ -8,6 +8,7 @@
 
 import UIKit
 
+@available(iOSApplicationExtension, unavailable)
 extension UIImage {
     func rotateImageByOrientation() -> UIImage {
         // No-op if the orientation is already correct

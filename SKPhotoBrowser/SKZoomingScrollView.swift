@@ -8,6 +8,7 @@
 
 import UIKit
 
+@available(iOSApplicationExtension, unavailable)
 open class SKZoomingScrollView: UIScrollView {
     var captionView: SKCaptionView!
     var photo: SKPhotoProtocol! {
@@ -248,6 +249,7 @@ open class SKZoomingScrollView: UIScrollView {
 
 // MARK: - UIScrollViewDelegate
 
+@available(iOSApplicationExtension, unavailable)
 extension SKZoomingScrollView: UIScrollViewDelegate {
     public func viewForZooming(in scrollView: UIScrollView) -> UIView? {
         return imageView
@@ -265,6 +267,7 @@ extension SKZoomingScrollView: UIScrollViewDelegate {
 
 // MARK: - SKDetectingImageViewDelegate
 
+@available(iOSApplicationExtension, unavailable)
 extension SKZoomingScrollView: SKDetectingViewDelegate {
     func handleSingleTap(_ view: UIView, touch: UITouch) {
         guard let browser = browser else {
@@ -291,6 +294,7 @@ extension SKZoomingScrollView: SKDetectingViewDelegate {
 
 // MARK: - SKDetectingImageViewDelegate
 
+@available(iOSApplicationExtension, unavailable)
 extension SKZoomingScrollView: SKDetectingImageViewDelegate {
     func handleImageViewSingleTap(_ touchPoint: CGPoint) {
         guard let browser = browser else {
@@ -308,6 +312,7 @@ extension SKZoomingScrollView: SKDetectingImageViewDelegate {
     }
 }
 
+@available(iOSApplicationExtension, unavailable)
 private extension SKZoomingScrollView {
     func getViewFramePercent(_ view: UIView, touch: UITouch) -> CGPoint {
         let oneWidthViewPercent = view.bounds.width / 100
