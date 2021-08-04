@@ -1,5 +1,11 @@
 # Change Log
 
+## 8.0.0
+
+### Breaking Changes
+- [#3] Marked all components `unavailable` for iOS application extensions
+- Incremented the minimum Swift Tools version to 5.5
+
 ## 7.0.0
 
 ### New
