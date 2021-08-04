@@ -9,6 +9,8 @@
 import UIKit
 
 // MARK: - SKLocalPhoto
+
+@available(iOSApplicationExtension, unavailable)
 open class SKLocalPhoto: NSObject, SKPhotoProtocol {
     
     open var underlyingImage: UIImage!
