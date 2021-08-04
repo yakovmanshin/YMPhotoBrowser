@@ -8,11 +8,13 @@
 
 import UIKit
 
+@available(iOSApplicationExtension, unavailable)
 @objc public protocol SKPhotoBrowserAnimatorDelegate {
     func willPresent(_ browser: SKPhotoBrowser)
     func willDismiss(_ browser: SKPhotoBrowser)
 }
 
+@available(iOSApplicationExtension, unavailable)
 class SKAnimator: NSObject, SKPhotoBrowserAnimatorDelegate {
     fileprivate let window = UIApplication.shared.preferredApplicationWindow
     fileprivate var resizableImageView: UIImageView?
@@ -123,6 +125,7 @@ class SKAnimator: NSObject, SKPhotoBrowserAnimatorDelegate {
     }
 }
 
+@available(iOSApplicationExtension, unavailable)
 private extension SKAnimator {
     func calcOriginFrame(_ sender: UIView) -> CGRect {
         if let senderViewOriginalFrameTemp = sender.superview?.convert(sender.frame, to: nil) {
@@ -156,6 +159,7 @@ private extension SKAnimator {
     }
 }
 
+@available(iOSApplicationExtension, unavailable)
 private extension SKAnimator {
     func presentAnimation(_ browser: SKPhotoBrowser, completion: (() -> Void)? = nil) {
         let finalFrame = self.finalImageViewFrame
