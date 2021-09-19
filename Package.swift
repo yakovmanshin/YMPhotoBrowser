@@ -5,7 +5,7 @@ import PackageDescription
 let package = Package(
     name: "SKPhotoBrowser",
     platforms: [
-        .iOS(.v8)
+        .iOS(.v11)
     ],
     products: [
         .library(
