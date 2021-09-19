@@ -1,5 +1,10 @@
 # Change Log
 
+## 9.0.0
+
+### Breaking Changes
+- Incremented the minimum iOS version to 11
+
 ## 8.0.0
 
 ### Breaking Changes
