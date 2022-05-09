@@ -1,5 +1,11 @@
 # Change Log
 
+## 10.0.0
+
+- Merged [upstream](https://github.com/suzuki-0000/SKPhotoBrowser):
+  - #371 Update README.md by bcorrea2 
+  - #374 Support network gif loading by p36348
+
 ## 9.0.0
 
 ### Breaking Changes
