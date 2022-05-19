@@ -1,5 +1,13 @@
 # Change Log
 
+## 10.1.0
+
+- Improved accessibility for VoiceOver
+- Added an option to hide image captions 
+- Created namespaces for image and string resources: `SKImage` and `SKString`
+- Removed redundant code
+- Bug fixes
+
 ## 10.0.0
 
 - Merged [upstream](https://github.com/suzuki-0000/SKPhotoBrowser):
