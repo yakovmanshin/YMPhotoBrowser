@@ -13,6 +13,8 @@ public struct SKPhotoBrowserOptions {
     public static var displayStatusbar: Bool = false
     public static var displayCloseButton: Bool = true
     public static var displayDeleteButton: Bool = false
+    
+    public static var displayCaptions = true
 
     public static var displayAction: Bool = true
     public static var shareExtraCaption: String?
