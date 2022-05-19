@@ -47,23 +47,7 @@ class SKButton: UIButton {
 }
 
 @available(iOSApplicationExtension, unavailable)
-class SKImageButton: SKButton {
-    fileprivate var imageName: String { return "" }
-
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-    }
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        setup(UIImage())
-        showFrame = CGRect(x: marginX, y: marginY, width: size.width, height: size.height)
-        hideFrame = CGRect(x: marginX, y: -marginY, width: size.width, height: size.height)
-    }
-}
-
-@available(iOSApplicationExtension, unavailable)
-class SKCloseButton: SKImageButton {
+class SKCloseButton: SKButton {
     override var marginX: CGFloat {
         get {
             return SKPhotoBrowserOptions.swapCloseAndDeleteButtons
@@ -90,7 +74,7 @@ class SKCloseButton: SKImageButton {
 }
 
 @available(iOSApplicationExtension, unavailable)
-class SKDeleteButton: SKImageButton {
+class SKDeleteButton: SKButton {
     override var marginX: CGFloat {
         get {
             return SKPhotoBrowserOptions.swapCloseAndDeleteButtons
