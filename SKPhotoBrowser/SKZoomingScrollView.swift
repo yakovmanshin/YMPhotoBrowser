@@ -170,9 +170,10 @@ open class SKZoomingScrollView: UIScrollView {
         }
     }
     
-    open func displayImage(_ image: UIImage) {
+    open func displayImage(_ image: UIImage, caption: String?) {
         // image
         imageView.image = image
+        imageView.caption = caption
         imageView.contentMode = photo.contentMode
         
         var imageViewFrame: CGRect = .zero
@@ -207,7 +208,7 @@ open class SKZoomingScrollView: UIScrollView {
         }
         
         if let image = photo.underlyingImage, photo != nil {
-            displayImage(image)
+            displayImage(image, caption: photo.caption)
 		    } else {
 			    // change contentSize will reset contentOffset, so only set the contentsize zero when the image is nil
 			    contentSize = CGSize.zero

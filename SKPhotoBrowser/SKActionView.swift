@@ -15,7 +15,7 @@ class SKActionView: UIView {
     internal var deleteButton: SKDeleteButton!
     
     // Action
-    fileprivate var cancelTitle = "Cancel"
+    fileprivate var cancelTitle = SKString.actionViewCancelTitle
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)

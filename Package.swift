@@ -4,6 +4,7 @@ import PackageDescription
 
 let package = Package(
     name: "SKPhotoBrowser",
+    defaultLocalization: "en",
     platforms: [
         .iOS(.v11)
     ],

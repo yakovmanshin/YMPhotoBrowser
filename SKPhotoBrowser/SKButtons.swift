@@ -70,7 +70,15 @@ class SKCloseButton: SKButton {
         setup(SKImage.close)
         showFrame = CGRect(x: marginX, y: marginY, width: size.width, height: size.height)
         hideFrame = CGRect(x: marginX, y: -marginY, width: size.width, height: size.height)
+        
+        configureAccessibility()
     }
+    
+    private func configureAccessibility() {
+        accessibilityLabel = SKString.closeButtonAccessibilityLabel
+        accessibilityHint = SKString.closeButtonAccessibilityHint
+    }
+    
 }
 
 @available(iOSApplicationExtension, unavailable)

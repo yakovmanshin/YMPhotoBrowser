@@ -16,6 +16,13 @@ import UIKit
 
 @available(iOSApplicationExtension, unavailable)
 class SKDetectingImageView: UIImageView {
+    
+    var caption: String? {
+        didSet {
+            accessibilityLabel = caption
+        }
+    }
+    
     weak var delegate: SKDetectingImageViewDelegate?
     
     required init?(coder aDecoder: NSCoder) {
@@ -49,5 +56,12 @@ private extension SKDetectingImageView {
         let singleTap = UITapGestureRecognizer(target: self, action: #selector(handleSingleTap(_:)))
         singleTap.require(toFail: doubleTap)
         addGestureRecognizer(singleTap)
+        
+        configureAccessibility()
+    }
+    
+    private func configureAccessibility() {
+        isAccessibilityElement = true
+        accessibilityHint = SKString.fullScreenImageAccessibilityHint
     }
 }

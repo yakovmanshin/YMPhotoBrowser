@@ -147,7 +147,7 @@ class SKPagingScrollView: UIScrollView {
             if let thumbnail = browser.animator.senderOriginImage,
                 index == browser.initPageIndex,
                 photo.underlyingImage == nil {
-                page.displayImage(thumbnail)
+                page.displayImage(thumbnail, caption: photo.caption)
             }
             
             visiblePages.append(page)
