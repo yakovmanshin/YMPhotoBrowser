@@ -8,8 +8,6 @@
 
 import UIKit
 
-private let bundle = Bundle.module
-
 @available(iOSApplicationExtension, unavailable)
 class SKPaginationView: UIView {
     var counterLabel: UILabel?
@@ -135,7 +133,7 @@ private extension SKPaginationView {
 class SKPaginationButton: UIButton {
     let insets: UIEdgeInsets = UIEdgeInsets(top: 13.25, left: 17.25, bottom: 13.25, right: 17.25)
     
-    func setup(_ imageName: String) {
+    func setup(_ image: UIImage) {
         backgroundColor = .clear
         imageEdgeInsets = insets
         translatesAutoresizingMaskIntoConstraints = true
@@ -145,32 +143,28 @@ class SKPaginationButton: UIButton {
                             .flexibleTopMargin]
         contentMode = .center
         
-        let image = UIImage(named: imageName,
-            in: bundle, compatibleWith: nil) ?? UIImage()
         setImage(image, for: .normal)
     }
 }
 
 class SKPrevButton: SKPaginationButton {
-    let imageName = "btn_common_back_wh"
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
     
     override init(frame: CGRect) {
         super.init(frame: CGRect(x: 0, y: 0, width: 44, height: 44))
-        setup(imageName)
+        setup(SKImage.back)
     }
 }
 
 class SKNextButton: SKPaginationButton {
-    let imageName = "btn_common_forward_wh"
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
     
     override init(frame: CGRect) {
         super.init(frame: CGRect(x: 0, y: 0, width: 44, height: 44))
-        setup(imageName)
+        setup(SKImage.forward)
     }
 }

@@ -8,8 +8,6 @@
 
 import UIKit
 
-private let bundle = Bundle.module
-
 @available(iOSApplicationExtension, unavailable)
 class SKButton: UIButton {
     internal var showFrame: CGRect!
@@ -27,13 +25,12 @@ class SKButton: UIButton {
     fileprivate var marginY: CGFloat = 0
     fileprivate var extraMarginY: CGFloat = 20 //NOTE: dynamic to static 
     
-    func setup(_ imageName: String) {
+    func setup(_ image: UIImage) {
         backgroundColor = .clear
         imageEdgeInsets = insets
         translatesAutoresizingMaskIntoConstraints = true
         autoresizingMask = [.flexibleBottomMargin, .flexibleLeftMargin, .flexibleRightMargin, .flexibleTopMargin]
         
-        let image = UIImage(named: imageName, in: bundle, compatibleWith: nil) ?? UIImage()
         setImage(image, for: .normal)
     }
   
@@ -59,7 +56,7 @@ class SKImageButton: SKButton {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        setup(imageName)
+        setup(UIImage())
         showFrame = CGRect(x: marginX, y: marginY, width: size.width, height: size.height)
         hideFrame = CGRect(x: marginX, y: -marginY, width: size.width, height: size.height)
     }
@@ -67,7 +64,6 @@ class SKImageButton: SKButton {
 
 @available(iOSApplicationExtension, unavailable)
 class SKCloseButton: SKImageButton {
-    override var imageName: String { return "btn_common_close_wh" }
     override var marginX: CGFloat {
         get {
             return SKPhotoBrowserOptions.swapCloseAndDeleteButtons
@@ -87,7 +83,7 @@ class SKCloseButton: SKImageButton {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        setup(imageName)
+        setup(SKImage.close)
         showFrame = CGRect(x: marginX, y: marginY, width: size.width, height: size.height)
         hideFrame = CGRect(x: marginX, y: -marginY, width: size.width, height: size.height)
     }
@@ -95,7 +91,6 @@ class SKCloseButton: SKImageButton {
 
 @available(iOSApplicationExtension, unavailable)
 class SKDeleteButton: SKImageButton {
-    override var imageName: String { return "btn_common_delete_wh" }
     override var marginX: CGFloat {
         get {
             return SKPhotoBrowserOptions.swapCloseAndDeleteButtons
@@ -115,7 +110,7 @@ class SKDeleteButton: SKImageButton {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-        setup(imageName)
+        setup(SKImage.delete)
         showFrame = CGRect(x: marginX, y: marginY, width: size.width, height: size.height)
         hideFrame = CGRect(x: marginX, y: -marginY, width: size.width, height: size.height)
     }
